@@ -1,0 +1,634 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="140 200 1320 600"
+  role="img"
+  aria-labelledby="title description"
+>
+  <title id="title">Two people building a bridge</title>
+
+  <desc id="description">
+    Minimal vector illustration of two stone bridge sections reaching across
+    a divide, with two human silhouettes meeting above the central gap.
+  </desc>
+
+  <defs>
+    <style>
+  .bridge-outline {
+    fill: none;
+    stroke: #292826;
+    stroke-width: 5.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .detail-line {
+    fill: none;
+    stroke: #292826;
+    stroke-width: 1.55;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .masonry-line {
+    fill: none;
+    stroke: #292826;
+    stroke-width: 1.35;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .silhouette {
+    fill: #292826;
+  }
+</style>
+
+    <!--
+      The clip paths use the bridge's original local coordinates.
+      Each clip path inherits the transformation of its parent bridge group.
+    -->
+
+    <clipPath id="left-bridge-clip">
+      <path
+        d="
+          M244 448
+          C360 425 483 405 603 394
+          C650 389 692 386 729 385
+
+          L729 397
+          L715 397
+          L715 408
+          L729 408
+          L729 420
+
+          C677 429 634 455 608 492
+          C587 522 582 555 582 596
+          L582 645
+          L548 645
+          L548 552
+
+          C548 518 531 488 504 470
+          C461 442 408 451 376 491
+          C359 512 350 535 348 558
+
+          C337 538 325 517 307 493
+          C291 472 271 456 244 448
+          Z
+        "
+      />
+    </clipPath>
+
+    <clipPath id="right-bridge-clip">
+      <path
+        d="
+          M871 385
+          C908 386 950 389 997 394
+          C1117 405 1240 425 1356 448
+
+          C1329 456 1309 472 1293 493
+          C1275 517 1263 538 1252 558
+
+          C1250 535 1241 512 1224 491
+          C1192 451 1139 442 1096 470
+          C1069 488 1052 518 1052 552
+          L1052 645
+          L1018 645
+          L1018 596
+
+          C1018 555 1013 522 992 492
+          C966 455 923 429 871 420
+
+          L871 408
+          L885 408
+          L885 397
+          L871 397
+          Z
+        "
+      />
+    </clipPath>
+  </defs>
+
+  <!-- =========================================================
+       LEFT LAND AND BRIDGE
+       ========================================================= -->
+
+  <g id="left-side" transform="translate(40 0)">
+
+    <!--
+      Upper landscape line.
+
+      The line is broadest where it connects to the bridge and tapers
+      progressively towards a single point at the outer edge.
+    -->
+
+    <path
+      d="
+        M244 447.5
+        C220 442.9 198 440.6 177 440.4
+        C154 440.2 132 440.6 111 441
+
+        C133 441.2 155 441.6 177 441.8
+        C199 442 221 444.4 244 448.8
+        Z
+      "
+      fill="#292826"
+    />
+
+    <!--
+      Supporting rock face.
+
+      The bridge deck and rock face share the coordinate M244 448,
+      ensuring that the bridge rests visibly on the rock.
+    -->
+
+    <path
+      d="
+        M244 447.5
+        C264 453.5 283 467.2 299 486.3
+        C315.5 506.2 327 529.5 343 554
+
+        C342.3 555.4 341.6 556.4 341 557
+
+        C325.4 533.6 314.2 511.3 297.7 491.2
+        C281.9 472.3 263 458.5 244 450
+        Z
+      "
+      fill="#292826"
+    />
+
+    <!--
+      Lower ledge.
+
+      This is slightly broader at the bridge-facing end and narrows
+      continuously towards the outer point.
+    -->
+
+    <path
+      d="
+	M343 531.5
+	C326 518.8 307 509.8 286 503.2
+    	C256 493.8 221 488.1 181 486
+
+    	C221 489.7 255 496.2 285 505.4
+    	C307 512.2 326 521.5 343 534
+    	Z
+      "
+      fill="#292826"
+      transform="translate(-15 0)"
+   />
+
+    <!-- Main bridge deck -->
+
+    <path
+      d="
+        M244 448
+        C360 425 483 405 603 394
+        C650 389 692 386 729 385
+      "
+      class="bridge-outline"
+    />
+
+    <!-- Broken central bridge end -->
+
+    <path
+      d="
+        M729 385
+        L729 397
+        L715 397
+        L715 408
+        L729 408
+        L729 420
+      "
+      class="bridge-outline"
+    />
+
+    <!-- Main central arch -->
+
+    <path
+      d="
+        M729 420
+        C677 429 634 455 608 492
+        C587 522 582 555 582 596
+        L582 644
+      "
+      class="bridge-outline"
+    />
+
+    <!-- Outer arch -->
+
+    <path
+      d="
+        M548 644
+        L548 552
+        C548 518 531 488 504 470
+        C461 442 408 451 376 491
+        C359 512 350 535 348 558
+      "
+      class="bridge-outline"
+    />
+
+    <!-- Fine lower edge of bridge deck -->
+
+    <path
+      d="
+        M268 462
+        C377 443 490 425 598 416
+        C646 412 687 410 715 409
+      "
+      class="detail-line"
+    />
+
+    <!--
+      Descending cliff face.
+
+      The width near the bridge is restrained. The two sides converge
+      progressively and terminate at exactly the same coordinate.
+    -->
+
+    <path
+      d="
+	M342.4 553.5
+
+    	C356 579 373 600 395 620
+    	C415 639 422 663 433 687
+    	C445 712 459 730 469 747
+
+    	C459 732 443 715 431 696
+    	C418 671 412 649 392 630
+    	C369 609 352 584 340.5 558
+
+    	Z
+      "
+      fill="#292826"
+    />
+
+    <!-- Masonry clipped strictly to the bridge body -->
+
+    <g clip-path="url(#left-bridge-clip)" class="masonry-line">
+
+      <path d="M269 474 C298 472 324 469 351 466"/>
+      <path d="M375 458 C402 454 429 451 455 447"/>
+      <path d="M479 439 C507 436 535 432 563 429"/>
+      <path d="M588 423 C616 420 642 418 669 416"/>
+      <path d="M691 413 C707 412 722 411 737 411"/>
+
+      <path d="M292 494 C319 492 345 489 370 486"/>
+      <path d="M393 480 C420 477 447 473 474 470"/>
+      <path d="M497 463 C525 460 552 457 579 454"/>
+      <path d="M603 449 C631 446 658 444 684 442"/>
+      <path d="M705 440 C719 439 731 439 742 439"/>
+
+      <path d="M326 516 C349 513 370 510 391 508"/>
+      <path d="M415 501 C441 498 465 495 488 493"/>
+      <path d="M512 487 C538 484 563 481 587 478"/>
+      <path d="M611 474 C635 471 657 469 678 468"/>
+
+      <path d="M476 519 C500 517 524 516 548 516"/>
+      <path d="M523 544 C544 543 563 543 583 543"/>
+      <path d="M538 571 L582 571"/>
+      <path d="M542 599 L582 599"/>
+      <path d="M543 626 L582 626"/>
+
+      <path d="M321 467 L322 480"/>
+      <path d="M406 452 L406 466"/>
+      <path d="M497 437 L497 452"/>
+      <path d="M583 424 L583 438"/>
+      <path d="M650 416 L650 430"/>
+      <path d="M702 412 L702 425"/>
+
+      <path d="M349 486 L349 499"/>
+      <path d="M439 473 L439 487"/>
+      <path d="M530 459 L530 474"/>
+      <path d="M620 447 L620 461"/>
+      <path d="M684 441 L684 454"/>
+
+      <path d="M384 507 L384 520"/>
+      <path d="M466 494 L466 507"/>
+      <path d="M551 482 L551 496"/>
+      <path d="M640 470 L640 483"/>
+
+      <path d="M516 516 L516 531"/>
+      <path d="M554 543 L554 558"/>
+      <path d="M561 570 L561 585"/>
+      <path d="M562 598 L562 613"/>
+    </g>
+  </g>
+
+  <!-- =========================================================
+       RIGHT LAND AND BRIDGE
+       ========================================================= -->
+
+  <g id="right-side" transform="translate(-40 0)">
+
+    <!-- Tapered upper landscape line -->
+
+    <path
+      d="
+        M1356 447.5
+        C1380 442.9 1402 440.6 1423 440.4
+        C1446 440.2 1468 440.6 1489 441
+
+        C1467 441.2 1445 441.6 1423 441.8
+        C1401 442 1379 444.4 1356 448.8
+        Z
+      "
+      fill="#292826"
+    />
+
+    <!-- Supporting rock face -->
+
+    <path
+      d="
+        M1356 447.5
+        C1336 453.5 1317 467.2 1301 486.3
+        C1284.5 506.2 1273 529.5 1257 554
+
+        C1257.7 555.4 1258.4 556.4 1259 557
+
+        C1274.6 533.6 1285.8 511.3 1302.3 491.2
+        C1318.1 472.3 1337 458.5 1356 450
+        Z
+      "
+      fill="#292826"
+    />
+
+    <!-- Tapered lower ledge -->
+
+    <path
+      d="
+        M1257 531.5
+        C1274 518.8 1293 509.8 1314 503.2
+        C1344 493.8 1379 488.1 1419 486
+
+        C1379 489.7 1345 496.2 1315 505.4
+        C1293 512.2 1274 521.5 1257 534
+        Z
+      "
+      fill="#292826"
+      transform="translate(15 0)"
+    />
+
+    <!-- Main bridge deck -->
+
+    <path
+      d="
+        M871 385
+        C908 386 950 389 997 394
+        C1117 405 1240 425 1356 448
+      "
+      class="bridge-outline"
+    />
+
+    <!-- Broken central bridge end -->
+
+    <path
+      d="
+        M871 385
+        L871 397
+        L885 397
+        L885 408
+        L871 408
+        L871 420
+      "
+      class="bridge-outline"
+    />
+
+    <!-- Main central arch -->
+
+    <path
+      d="
+        M871 420
+        C923 429 966 455 992 492
+        C1013 522 1018 555 1018 596
+        L1018 644
+      "
+      class="bridge-outline"
+    />
+
+    <!-- Outer arch -->
+
+    <path
+      d="
+        M1052 644
+        L1052 552
+        C1052 518 1069 488 1096 470
+        C1139 442 1192 451 1224 491
+        C1241 512 1250 535 1252 558
+      "
+      class="bridge-outline"
+    />
+
+    <!-- Fine lower edge of bridge deck -->
+
+    <path
+      d="
+        M885 409
+        C913 410 954 412 1002 416
+        C1110 425 1223 443 1332 462
+      "
+      class="detail-line"
+    />
+
+    <!-- Descending cliff face -->
+
+    <path
+  d="
+    M1257.6 553.5
+
+    C1244 579 1227 600 1205 620
+    C1185 639 1178 663 1167 687
+    C1155 712 1141 730 1131 747
+
+    C1141 732 1157 715 1169 696
+    C1182 671 1188 649 1208 630
+    C1231 609 1248 584 1259.5 558
+
+    Z
+  "
+  fill="#292826"
+/>
+
+    <!-- Masonry clipped strictly to the bridge body -->
+
+    <g clip-path="url(#right-bridge-clip)" class="masonry-line">
+
+      <path d="M863 411 C878 411 893 412 909 413"/>
+      <path d="M931 416 C958 418 984 420 1012 423"/>
+      <path d="M1037 429 C1065 432 1093 436 1121 439"/>
+      <path d="M1145 447 C1171 451 1198 454 1225 458"/>
+      <path d="M1249 466 C1276 469 1302 472 1331 474"/>
+
+      <path d="M858 439 C869 439 881 439 895 440"/>
+      <path d="M916 442 C942 444 969 446 997 449"/>
+      <path d="M1021 454 C1048 457 1075 460 1103 463"/>
+      <path d="M1126 470 C1153 473 1180 477 1207 480"/>
+      <path d="M1230 486 C1255 489 1281 492 1308 494"/>
+
+      <path d="M922 468 C943 469 965 471 989 474"/>
+      <path d="M1013 478 C1037 481 1062 484 1088 487"/>
+      <path d="M1112 493 C1135 495 1159 498 1185 501"/>
+      <path d="M1209 508 C1230 510 1251 513 1274 516"/>
+
+      <path d="M1052 516 C1076 516 1100 517 1124 519"/>
+      <path d="M1017 543 C1037 543 1056 543 1077 544"/>
+      <path d="M1018 571 L1062 571"/>
+      <path d="M1018 599 L1058 599"/>
+      <path d="M1018 626 L1057 626"/>
+
+      <path d="M898 412 L898 425"/>
+      <path d="M950 416 L950 430"/>
+      <path d="M1017 424 L1017 438"/>
+      <path d="M1103 437 L1103 452"/>
+      <path d="M1194 452 L1194 466"/>
+      <path d="M1278 467 L1278 480"/>
+
+      <path d="M916 441 L916 454"/>
+      <path d="M980 447 L980 461"/>
+      <path d="M1070 459 L1070 474"/>
+      <path d="M1161 473 L1161 487"/>
+      <path d="M1251 486 L1251 499"/>
+
+      <path d="M960 470 L960 483"/>
+      <path d="M1049 482 L1049 496"/>
+      <path d="M1134 494 L1134 507"/>
+      <path d="M1216 507 L1216 520"/>
+
+      <path d="M1084 516 L1084 531"/>
+      <path d="M1046 543 L1046 558"/>
+      <path d="M1039 570 L1039 585"/>
+      <path d="M1038 598 L1038 613"/>
+    </g>
+  </g>
+
+  <!-- =========================================================
+       LEFT FIGURE
+
+       The original shoe baseline is y=430. The translation raises it
+       to y=386, matching the bridge surface beneath the figure.
+       ========================================================= -->
+
+  <g
+    id="left-person"
+    class="silhouette"
+    aria-label="Person standing on the left bridge"
+    transform="translate(0 -44)"
+  >
+    <!-- Head -->
+
+    <path
+      d="
+        M739 282
+        C742 279 747 278 750 280
+        C754 282 756 287 755 292
+        C754 298 751 303 747 305
+        C743 307 739 304 737 301
+        C734 296 735 287 739 282
+        Z
+      "
+    />
+
+    <!-- Continuous body silhouette -->
+
+    <path
+      d="
+        M740 308
+
+        C734 310 730 315 727 322
+        C723 333 720 348 718 364
+        L716 383
+
+        C716 394 714 407 710 422
+        C708 425 707 427 706 430
+        L728 430
+        C729 426 728 423 725 421
+
+        C728 408 730 397 731 387
+
+        C733 398 736 410 740 422
+        C738 425 737 427 737 430
+        L759 430
+        C758 426 756 423 752 421
+
+        C748 408 745 394 744 380
+        C744 363 745 348 748 337
+
+        C754 344 761 350 770 354
+	C778 359 785 361 792 361
+
+	C796 361 799 359 799 356
+	C799 353 796 351 792 350
+
+	C786 349 779 346 772 342
+	C764 337 758 331 752 322
+
+        C749 314 745 309 740 308
+        Z
+      "
+    />
+  </g>
+
+  <!-- =========================================================
+       RIGHT FIGURE
+       ========================================================= -->
+
+  <g
+    id="right-person"
+    class="silhouette"
+    aria-label="Person standing on the right bridge"
+    transform="translate(0 -44)"
+  >
+    <!-- Head -->
+
+    <path
+      d="
+        M861 282
+        C858 279 853 278 850 280
+        C846 282 844 287 845 292
+        C846 298 849 303 853 305
+        C857 307 861 304 863 301
+        C866 296 865 287 861 282
+        Z
+      "
+    />
+
+    <!-- Continuous body silhouette -->
+    <path
+      d="
+        M860 308
+
+        C866 310 870 315 873 322
+        C877 333 880 348 882 364
+        L884 383
+
+        C884 394 886 407 890 422
+        C892 425 893 427 894 430
+        L872 430
+        C871 426 872 423 875 421
+
+        C872 408 870 397 869 387
+
+        C867 398 864 410 860 422
+        C862 425 863 427 863 430
+        L841 430
+        C842 426 844 423 848 421
+
+        C852 408 855 394 856 380
+        C856 363 855 348 852 337
+
+        C846 344 839 350 830 354
+	C822 359 815 361 808 361
+
+	C804 361 801 359 801 356
+	C801 353 804 351 808 350
+
+	C814 349 821 346 828 342
+	C836 337 842 331 848 322
+
+        C851 314 855 309 860 308
+        Z
+      "
+    />
+  </g>
+</svg>

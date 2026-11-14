@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap');
+
+:root {
+    --home-hero-offset: 140px;
+    --home-hero-padding: 100px;
+}
+
+html,
+body {
+    font-family: "EB Garamond", Georgia, serif;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+
+/* Homepage intro */
+
+.home-intro {
+    max-width: 48rem;
+    margin: 1.5rem auto 3rem;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.home-intro h1 {
+    margin-bottom: 0.75rem;
+    font-size: 3rem;
+    line-height: 1.05;
+    font-weight: 600;
+}
+
+.home-intro p {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+/* Homepage hero */
+.home-hero {
+    /* Break out of Congo's max-width body */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+
+    /* Pull the fade upwards into the intro */
+    margin-top: calc(-1 * var(--home-hero-offset));
+    padding-top: var(--home-hero-padding);
+
+    /* Fill the remainder of the viewport */
+    height: calc(100dvh - var(--home-hero-offset));
+    overflow: hidden;
+}
+
+.home-hero img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /* Fill the space without distorting the photograph */
+    object-fit: cover;
+
+    /* Keep the centre of the photograph visible as it crops */
+    object-position: 58% center;
+
+    /* Fade into the page */
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0px,
+        rgba(0, 0, 0, 0.08) 30px,
+        rgba(0, 0, 0, 0.20) 60px,
+        rgba(0, 0, 0, 0.40) 95px,
+        rgba(0, 0, 0, 0.65) 130px,
+        rgba(0, 0, 0, 0.85) 160px,
+        black 190px
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0px,
+        rgba(0, 0, 0, 0.08) 30px,
+        rgba(0, 0, 0, 0.20) 60px,
+        rgba(0, 0, 0, 0.40) 95px,
+        rgba(0, 0, 0, 0.65) 130px,
+        rgba(0, 0, 0, 0.85) 160px,
+        black 190px
+    );
+}
+
+
+/* Shorter transition in dark mode */
+.dark .home-hero img {
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0px,
+        rgba(0, 0, 0, 0.15) 15px,
+        rgba(0, 0, 0, 0.4) 30px,
+        rgba(0, 0, 0, 0.7) 50px,
+        black 75px
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0px,
+        rgba(0, 0, 0, 0.15) 15px,
+        rgba(0, 0, 0, 0.4) 30px,
+        rgba(0, 0, 0, 0.7) 50px,
+        black 75px
+    );
+}
+
+
+/* About page */
+
+article section.prose > div.max-w-prose {
+    position: relative;
+}
+
+.about-photo {
+    position: absolute;
+    top: -0.5em;
+    left: calc(100% + 4rem);
+
+    width: 14rem;
+    height: 14rem;
+    max-width: none;
+
+    margin: 0;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .about-photo {
+        position: static;
+
+        display: block;
+        width: 12rem;
+        height: 12rem;
+
+        margin: 0 auto 2rem;
+    }
+}
+
+
+/* Strong emphasis in article text */
+
+.prose strong {
+    font-weight: 800;
+}

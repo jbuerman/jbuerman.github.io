@@ -1,0 +1,5 @@
+baseURL = "https://jbuerman.github.io/"
+locale = "en-GB"
+defaultContentLanguage = "en"
+
+enableRobotsTXT = true

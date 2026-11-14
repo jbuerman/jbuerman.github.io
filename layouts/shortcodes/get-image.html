@@ -1,0 +1,6 @@
+{{ $image := resources.Get (.Get 0) }}
+{{ if $image }}
+  <img src="{{ $image.RelPermalink }}" alt="{{ .Get 1 | default "Photo" }}" class="{{ .Get 2 | default "" }}">
+{{ else }}
+  <p>Image not found: {{ .Get 0 }}</p>
+{{ end }}

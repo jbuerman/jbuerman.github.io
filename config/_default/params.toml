@@ -1,0 +1,20 @@
+colorScheme = "jan"
+
+defaultAppearance = "light"
+autoSwitchAppearance = false
+defaultThemeColor = "#f8f7f3"
+
+[header]
+  layout = "basic"
+  logo = "images/logo.png"
+  showTitle = true
+
+[footer]
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = true
+  showScrollToTop = false
+
+[homepage]
+  layout = "custom"
+  showRecent = false

@@ -1,0 +1,43 @@
+/* Jan scheme */
+:root {
+    /* Warm neutral */
+    --color-neutral: 248, 247, 243;
+
+    --color-neutral-50: 248, 247, 243;
+    --color-neutral-100: 241, 240, 235;
+    --color-neutral-200: 228, 226, 220;
+    --color-neutral-300: 211, 208, 200;
+    --color-neutral-400: 162, 158, 149;
+    --color-neutral-500: 116, 112, 104;
+    --color-neutral-600: 84, 81, 75;
+    --color-neutral-700: 64, 62, 57;
+    --color-neutral-800: 42, 41, 38;
+    --color-neutral-900: 30, 29, 27;
+    --color-neutral-950: 20, 19, 18;
+
+    /* Muted blue-grey */
+    --color-primary-50: 245, 247, 247;
+    --color-primary-100: 231, 235, 235;
+    --color-primary-200: 207, 215, 214;
+    --color-primary-300: 173, 187, 185;
+    --color-primary-400: 130, 151, 148;
+    --color-primary-500: 95, 118, 115;
+    --color-primary-600: 75, 95, 93;
+    --color-primary-700: 62, 78, 77;
+    --color-primary-800: 52, 65, 64;
+    --color-primary-900: 45, 56, 55;
+    --color-primary-950: 23, 31, 30;
+
+    /* Muted earth */
+    --color-secondary-50: 249, 247, 242;
+    --color-secondary-100: 240, 235, 224;
+    --color-secondary-200: 224, 214, 195;
+    --color-secondary-300: 201, 184, 156;
+    --color-secondary-400: 174, 149, 113;
+    --color-secondary-500: 147, 119, 83;
+    --color-secondary-600: 119, 94, 65;
+    --color-secondary-700: 96, 75, 54;
+    --color-secondary-800: 80, 63, 48;
+    --color-secondary-900: 69, 54, 44;
+    --color-secondary-950: 38, 29, 22;
+}

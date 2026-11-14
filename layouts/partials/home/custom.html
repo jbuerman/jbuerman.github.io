@@ -1,0 +1,11 @@
+<div class="home-intro">
+  {{ .Content }}
+</div>
+
+{{ with resources.Get "images/sweden-sea.jpg" }}
+  <div class="home-hero">
+    <img
+      src="{{ .RelPermalink }}"
+      alt="Rocky shoreline and open water" />
+  </div>
+{{ end }}

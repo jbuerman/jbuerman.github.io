@@ -1,0 +1,13 @@
+title = "Jan Buermann"
+label = "English"
+weight = 1
+
+[params]
+  locale = "en"
+
+[params.author]
+  name = "Jan Buermann"
+  links = [
+    { github = "https://github.com/jbuerman" },
+    { linkedin = "www.linkedin.com/in/jbuermann" }
+  ]
